@@ -1,2 +1,7 @@
 # 189-ami
-Asterisk管理接口对接
+
+Asterisk 管理接口对接
+
+# 安装
+
+npm i

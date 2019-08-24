@@ -1,0 +1,27 @@
+{
+  "name": "189-ami",
+  "version": "0.0.1",
+  "description": "Dev189 Asterisk Manager Interface",
+  "main": "app.js",
+  "scripts": {
+    "start": "node ./app.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ctdev189/189-ami.git"
+  },
+  "keywords": [
+    "Asterisk",
+    "AMI"
+  ],
+  "author": "jasony62",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/ctdev189/189-ami/issues"
+  },
+  "homepage": "https://github.com/ctdev189/189-ami#readme",
+  "dependencies": {
+    "asterisk-ami-client": "^1.1.5"
+  }
+}
