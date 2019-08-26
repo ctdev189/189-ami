@@ -1,4 +1,5 @@
 const redis = require("redis")
+const Kafka = require("node-rdkafka")
 const AppConfig = require("../cus/config")
 
 let RedisConfig = AppConfig.redis || {}
