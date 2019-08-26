@@ -1,12 +1,18 @@
 const AmiClient = require("asterisk-ami-client")
+const AppConfig = require("./cus/config")
+const fnAmiEventHandler = require("./ami/event")
+
 let client = new AmiClient()
 
 client
-  .connect("user", "secret", { host: "localhost", port: 5038 })
+  .connect(AppConfig.ami.user, AppConfig.ami.secret, {
+    host: AppConfig.ami.host,
+    port: AppConfig.ami.port
+  })
   .then(amiConnection => {
     client
       .on("connect", () => console.log("connect"))
-      .on("event", event => console.log(event))
+      .on("event", fnAmiEventHandler)
       .on("data", chunk => console.log(chunk))
       .on("response", response => console.log(response))
       .on("disconnect", () => console.log("disconnect"))
