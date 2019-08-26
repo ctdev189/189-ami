@@ -4,5 +4,9 @@ module.exports = {
     secret: "",
     host: "",
     port: ""
+  },
+  redis: {
+    host: "",
+    port: ""
   }
 }

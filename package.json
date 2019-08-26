@@ -22,6 +22,7 @@
   },
   "homepage": "https://github.com/ctdev189/189-ami#readme",
   "dependencies": {
-    "asterisk-ami-client": "^1.1.5"
+    "asterisk-ami-client": "^1.1.5",
+    "redis": "^2.8.0"
   }
 }

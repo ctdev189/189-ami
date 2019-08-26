@@ -1,5 +1,12 @@
 const redis = require("redis")
-const pub = redis.createClient()
+const AppConfig = require("../cus/config")
+
+let RedisConfig = AppConfig.redis || {}
+
+const pub = redis.createClient({
+  host: RedisConfig.host || "127.0.0.1",
+  port: RedisConfig.host || 6379
+})
 /**
  * Redis消息队列
  */
@@ -30,9 +37,8 @@ class RedisMessage {
 
 function handler(amiEvent) {
   if ("Cdr" === amiEvent.Event) {
-    const item = new RedisMessage(amiEvent)
-    item.publish()
+    const msg = new RedisMessage(amiEvent)
+    msg.publish()
   }
-  console.log(event)
 }
 module.exports = handler
