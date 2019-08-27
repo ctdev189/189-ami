@@ -13,6 +13,6 @@ if (AppConfig.kafka && typeof AppConfig.kafka === "object") {
   })
 
   consumer.on("message", message => {
-    console.log(`主题收到消息：${message}`)
+    console.log(`主题'${message.topic}'收到消息：${message.value}`)
   })
 }
